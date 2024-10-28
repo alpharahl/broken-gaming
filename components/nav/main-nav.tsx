@@ -1,19 +1,13 @@
-import * as React from "react"
+'use client';
+import {useMediaQuery} from "@/hooks/use-media-query";
+import Navbar from "@/components/nav/Navbar";
+import MobileNav from "@/components/nav/mobile-nav";
 
-export function useMediaQuery(query: string) {
-  const [value, setValue] = React.useState(false)
-
-  React.useEffect(() => {
-    function onChange(event: MediaQueryListEvent) {
-      setValue(event.matches)
-    }
-
-    const result = matchMedia(query)
-    result.addEventListener("change", onChange)
-    setValue(result.matches)
-
-    return () => result.removeEventListener("change", onChange)
-  }, [query])
-
-  return value
+export default () => {
+  const isDesktop = useMediaQuery('(min-width: 1024px)');
+  if (isDesktop){
+    return <Navbar/>
+  } else {
+    return <MobileNav/>
+  }
 }
