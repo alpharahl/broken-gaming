@@ -4,7 +4,7 @@ import logo from "@/assets/BGL-Logo.svg"
 import Image from "next/image";
 import Link from "next/link";
 
-export default () => {
+const MobileNav = () => {
   return <div className="flex justify-between p-2">
     <div className={"flex items-center gap-2 text-3xl"}>
     <Image src={logo.src} alt={"Broken Gaming League Logo"} height={100} width={100}/>
@@ -31,3 +31,5 @@ export default () => {
     </Drawer>
   </div>
 }
+
+export default MobileNav;

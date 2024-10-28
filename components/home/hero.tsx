@@ -1,4 +1,4 @@
-export default () => {
+const Hero = () => {
   return <div className={"bg-slate-800 text-white min-h-80 flex flex-col items-center justify-center "}>
     <div
       className=" w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]">
@@ -24,3 +24,5 @@ export default () => {
     </div>
   </div>
 }
+
+export default Hero;

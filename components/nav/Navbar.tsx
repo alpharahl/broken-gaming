@@ -3,7 +3,7 @@ import Image from "next/image";
 import logo from "@/assets/BGL-Logo.svg"
 import {FaFacebook, FaInstagram, FaTwitch, FaTwitter} from "react-icons/fa";
 
-export default () => {
+const Navbar =  () => {
   return (
     <nav className="navbar navbar-expand-lg bg-white text-black px-20 py-5 flex justify-between items-center">
       <div className="flex gap-5">
@@ -26,3 +26,5 @@ export default () => {
     </nav>
   )
 }
+
+export default Navbar;
