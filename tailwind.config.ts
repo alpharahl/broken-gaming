@@ -9,7 +9,16 @@ const config: Config = {
   ],
   theme: {
   	extend: {
-  		colors: {
+			animation: {
+				'infinite-scroll': 'infinite-scroll 45s linear infinite',
+			},
+			keyframes: {
+				'infinite-scroll': {
+					from: { transform: 'translateX(0)' },
+					to: { transform: 'translateX(-80%)' },
+				}
+			},
+			colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {
